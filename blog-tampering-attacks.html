@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The rise of mobile tampering attacks — Armoryx Blog</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container"><div class="header-inner">
+      <a href="index.html" class="logo">Armor<span>yx</span></a>
+      <nav class="nav-links"><a href="features.html">Features</a><a href="why.html">Why</a><a href="company.html">Company</a><a href="faqs.html">FAQs</a><a href="blog.html" class="active">Blog</a></nav>
+      <div class="header-actions"><a href="demo.html" class="btn btn-primary btn-sm">Book a Demo</a><button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+    </div></div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu"><a href="features.html">Features</a><a href="why.html">Why</a><a href="company.html">Company</a><a href="faqs.html">FAQs</a><a href="blog.html">Blog</a><a href="demo.html" class="btn btn-primary">Book a Demo</a></div>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-detail">
+        <a href="blog.html" style="color:var(--accent);font-size:13px;font-weight:500;">← Back to Blog</a>
+        <h1>The rise of mobile tampering attacks</h1>
+        <div class="meta">Threats · February 3, 2024 · 7 min read</div>
+        <div class="content">
+          <h2>230% growth in tampering incidents</h2>
+          <p>Mobile app tampering has exploded over the past two years, with security researchers reporting a 230% year-over-year increase in detected tampering attempts across monitored applications. This isn't just theoretical risk — it's a measurable, growing threat that affects every industry from gaming to banking.</p>
+          <p>The growth is driven by two factors: the increasing value stored in mobile apps (payment credentials, loyalty points, premium features) and the democratization of reverse engineering tools. What once required deep expertise now requires only a YouTube tutorial and freely available software.</p>
+
+          <h2>What attackers modify</h2>
+          <p>Tampering attacks target the most valuable logic in your application. The most common modification targets include:</p>
+          <ul>
+            <li><strong>Payment logic:</strong> Modifying transaction amounts, bypassing payment verification, or injecting fake payment confirmations to access premium content for free.</li>
+            <li><strong>License and subscription checks:</strong> Patching boolean checks that gate premium features, removing trial expiration logic, or spoofing subscription status responses.</li>
+            <li><strong>API call parameters:</strong> Modifying request bodies before they're sent to the server — changing user IDs, elevating permissions, or accessing unauthorized data.</li>
+            <li><strong>Security checks:</strong> Disabling root detection, certificate pinning, integrity verification, and other defensive measures that would otherwise block the attack.</li>
+            <li><strong>Ad logic:</strong> Removing advertising code to create "ad-free" pirated versions, or injecting competing ad networks to steal revenue.</li>
+          </ul>
+
+          <h2>Tools of the trade</h2>
+          <p>The barrier to entry for mobile tampering has never been lower. Attackers commonly use:</p>
+          <ul>
+            <li><strong>APKTool:</strong> Decompiles Android apps to smali bytecode for modification, then recompiles and re-signs the modified package.</li>
+            <li><strong>Jadx:</strong> Decompiles DEX bytecode to readable Java source, making it easy to understand app logic and identify modification targets.</li>
+            <li><strong>Frida:</strong> Dynamic instrumentation toolkit that hooks into running processes, intercepts function calls, and modifies behavior without recompilation.</li>
+            <li><strong>Ghidra / IDA Pro:</strong> Binary analysis tools for native code reverse engineering, used to understand and modify compiled C/C++ libraries.</li>
+            <li><strong>Magisk:</strong> Systemless root framework that hides root status from detection mechanisms, enabling attacks on apps that check for root.</li>
+          </ul>
+
+          <h2>Defense strategies that work</h2>
+          <p>Defending against tampering requires a layered approach. No single technique is sufficient, but when combined, they make attacks economically unviable:</p>
+          <ul>
+            <li><strong>Integrity verification:</strong> Cryptographic checksums verified at runtime detect any modification to the app binary, resources, or native libraries.</li>
+            <li><strong>Anti-debugging:</strong> Detect and respond to debuggers, tracers, and instrumentation frameworks that enable runtime manipulation.</li>
+            <li><strong>Code obfuscation:</strong> Make reverse engineering prohibitively time-consuming by transforming readable code into functionally equivalent but incomprehensible forms.</li>
+            <li><strong>Environment checks:</strong> Verify device integrity — root status, emulator detection, and OS modification — to identify high-risk execution environments.</li>
+            <li><strong>Server-side attestation:</strong> Validate app integrity from the backend, ensuring that only genuine, unmodified clients can access your APIs.</li>
+          </ul>
+          <p>The most effective defense applies all these layers automatically, without requiring source code changes or ongoing manual maintenance. This is exactly what runtime application self-protection platforms like Armoryx provide — comprehensive, binary-level tampering defense that deploys in minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo">Armor<span>yx</span></a><p>AI-powered runtime application security for Android and iOS.</p></div>
+        <div class="footer-col"><h4>Product</h4><a href="features.html">Features</a><a href="features.html">App Shielding</a><a href="features.html">Runtime Protection</a></div>
+        <div class="footer-col"><h4>Resources</h4><a href="blog.html">Blog</a><a href="faqs.html">FAQs</a><a href="demo.html">Book a Demo</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="company.html">About</a><a href="company.html">Careers</a><a href="demo.html">Contact</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 Armoryx, Inc. All rights reserved.</p><div class="footer-links"><a href="#">Twitter</a><a href="#">LinkedIn</a><a href="#">GitHub</a></div></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

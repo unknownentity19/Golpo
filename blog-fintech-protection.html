@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protecting fintech apps after release — Armoryx Blog</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container"><div class="header-inner">
+      <a href="index.html" class="logo">Armor<span>yx</span></a>
+      <nav class="nav-links"><a href="features.html">Features</a><a href="why.html">Why</a><a href="company.html">Company</a><a href="faqs.html">FAQs</a><a href="blog.html" class="active">Blog</a></nav>
+      <div class="header-actions"><a href="demo.html" class="btn btn-primary btn-sm">Book a Demo</a><button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+    </div></div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu"><a href="features.html">Features</a><a href="why.html">Why</a><a href="company.html">Company</a><a href="faqs.html">FAQs</a><a href="blog.html">Blog</a><a href="demo.html" class="btn btn-primary">Book a Demo</a></div>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-detail">
+        <a href="blog.html" style="color:var(--accent);font-size:13px;font-weight:500;">← Back to Blog</a>
+        <h1>Protecting fintech apps after release</h1>
+        <div class="meta">Fintech · February 28, 2024 · 6 min read</div>
+        <div class="content">
+          <h2>Why fintech is the #1 target</h2>
+          <p>Financial applications are the most attacked category of mobile apps worldwide. The reason is simple economics: fintech apps have direct access to money. Every payment app, neobank, trading platform, and crypto wallet represents a high-value target where successful attacks translate immediately to financial gain.</p>
+          <p>Unlike gaming or social media apps where the value of a compromise is indirect, a compromised fintech app gives attackers direct access to transaction logic, payment credentials, and account manipulation capabilities. This makes the return on investment for attackers significantly higher — and the attacks more sophisticated as a result.</p>
+
+          <h2>Regulatory pressure: PCI DSS and beyond</h2>
+          <p>Beyond the threat landscape, fintech companies face intense regulatory scrutiny around mobile app security. PCI DSS 4.0 explicitly requires that mobile payment applications implement tamper-detection mechanisms, and regulators are increasingly treating unprotected mobile clients as compliance failures.</p>
+          <p>The regulatory landscape includes:</p>
+          <ul>
+            <li><strong>PCI DSS 4.0:</strong> Requirement 11.3 mandates application-level penetration testing, and Requirement 6.4 requires protection against known attack vectors including tampering and reverse engineering.</li>
+            <li><strong>PSD2 / Strong Customer Authentication:</strong> Requires that mobile banking apps demonstrate resistance to dynamic analysis and runtime manipulation.</li>
+            <li><strong>Regional regulations:</strong> The Monetary Authority of Singapore, European Banking Authority, and other bodies have issued specific guidance on mobile application security controls.</li>
+          </ul>
+
+          <h2>Common attack flows on payment apps</h2>
+          <p>Attacks on fintech apps follow predictable patterns that have been refined over years of exploitation:</p>
+          <ul>
+            <li><strong>Transaction manipulation:</strong> Hooking into payment functions to modify amounts, recipient accounts, or currency before the request reaches the server.</li>
+            <li><strong>Credential harvesting:</strong> Injecting overlay screens or keyloggers to capture login credentials, PINs, and one-time passwords.</li>
+            <li><strong>API abuse:</strong> Reverse engineering API endpoints to craft unauthorized requests — transferring funds, accessing other accounts, or exploiting business logic flaws.</li>
+            <li><strong>Session hijacking:</strong> Extracting authentication tokens from memory or intercepting them via network proxies to impersonate legitimate users.</li>
+          </ul>
+
+          <h2>How runtime protection closes the gap</h2>
+          <p>Traditional fintech security focuses on the backend: fraud detection systems, transaction monitoring, and API security. These are essential but insufficient. They only see what the compromised client sends — and by then, the damage may be done.</p>
+          <p>Runtime protection closes this gap by securing the client itself. When your payment app is protected with RASP, attackers cannot hook into transaction functions, cannot extract tokens from memory, cannot modify payment logic, and cannot even run the app in a compromised environment without detection.</p>
+          <p>For fintech teams, the combination of compliance requirements, high-value targets, and sophisticated attackers makes runtime protection not optional but essential. The cost of a single successful attack — in fraud losses, regulatory fines, and reputation damage — vastly exceeds the cost of comprehensive app protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo">Armor<span>yx</span></a><p>AI-powered runtime application security for Android and iOS.</p></div>
+        <div class="footer-col"><h4>Product</h4><a href="features.html">Features</a><a href="features.html">App Shielding</a><a href="features.html">Runtime Protection</a></div>
+        <div class="footer-col"><h4>Resources</h4><a href="blog.html">Blog</a><a href="faqs.html">FAQs</a><a href="demo.html">Book a Demo</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="company.html">About</a><a href="company.html">Careers</a><a href="demo.html">Contact</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 Armoryx, Inc. All rights reserved.</p><div class="footer-links"><a href="#">Twitter</a><a href="#">LinkedIn</a><a href="#">GitHub</a></div></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

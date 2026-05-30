@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OWASP MASVS explained for mobile teams — Armoryx Blog</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container"><div class="header-inner">
+      <a href="index.html" class="logo">Armor<span>yx</span></a>
+      <nav class="nav-links"><a href="features.html">Features</a><a href="why.html">Why</a><a href="company.html">Company</a><a href="faqs.html">FAQs</a><a href="blog.html" class="active">Blog</a></nav>
+      <div class="header-actions"><a href="demo.html" class="btn btn-primary btn-sm">Book a Demo</a><button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
+    </div></div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu"><a href="features.html">Features</a><a href="why.html">Why</a><a href="company.html">Company</a><a href="faqs.html">FAQs</a><a href="blog.html">Blog</a><a href="demo.html" class="btn btn-primary">Book a Demo</a></div>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-detail">
+        <a href="blog.html" style="color:var(--accent);font-size:13px;font-weight:500;">← Back to Blog</a>
+        <h1>OWASP MASVS explained for mobile teams</h1>
+        <div class="meta">Compliance · April 5, 2024 · 7 min read</div>
+        <div class="content">
+          <h2>What is MASVS?</h2>
+          <p>The OWASP Mobile Application Security Verification Standard (MASVS) is the industry-standard framework for mobile app security requirements. Developed by the Open Web Application Security Project, MASVS defines a baseline of security controls that every mobile app should implement, along with enhanced requirements for apps that handle sensitive data.</p>
+          <p>MASVS is not a penetration testing methodology — it's a requirements framework. It tells you what security controls your app needs, organized into clear categories: data storage, cryptography, authentication, network communication, platform interaction, code quality, and resilience against reverse engineering.</p>
+
+          <h2>L1 vs L2 controls</h2>
+          <p>MASVS defines two primary verification levels:</p>
+          <ul>
+            <li><strong>MASVS-L1 (Standard Security):</strong> The baseline that every mobile app should meet. Covers fundamental security hygiene — proper data storage, network security, input validation, and basic platform security. Appropriate for apps that don't handle highly sensitive data.</li>
+            <li><strong>MASVS-L2 (Defense-in-Depth):</strong> Enhanced requirements for apps that handle sensitive data — banking, healthcare, government, and payment applications. Includes all L1 controls plus advanced protections: certificate pinning, anti-tampering, root detection, code obfuscation, and runtime integrity verification.</li>
+          </ul>
+          <p>Additionally, MASVS defines a Resilience category (MASVS-R) for apps that need protection against reverse engineering and client-side attacks. This includes requirements for obfuscation, anti-debugging, device integrity verification, and runtime instrumentation detection.</p>
+
+          <h2>How to achieve compliance</h2>
+          <p>Achieving MASVS compliance requires a systematic approach:</p>
+          <ul>
+            <li><strong>Gap analysis:</strong> Map your current security controls against MASVS requirements to identify what's missing. The OWASP MSTG (Mobile Security Testing Guide) provides specific test cases for each requirement.</li>
+            <li><strong>Prioritize by risk:</strong> Not all requirements carry equal weight. Focus first on data storage (where most breaches originate), network security (MITM prevention), and authentication controls.</li>
+            <li><strong>Implement in layers:</strong> Start with L1 controls in your development process, then add L2/R controls through runtime protection tooling. Trying to implement everything manually is prohibitively expensive.</li>
+            <li><strong>Continuous verification:</strong> MASVS compliance isn't a one-time achievement. Automated testing in CI/CD ensures that new releases maintain compliance as code changes.</li>
+          </ul>
+
+          <h2>How Armoryx maps to MASVS requirements</h2>
+          <p>Automated runtime protection platforms like Armoryx are specifically designed to address the most challenging MASVS requirements — the ones that are difficult or impossible to implement manually in source code:</p>
+          <ul>
+            <li><strong>MASVS-RESILIENCE-1:</strong> App integrity verification — covered by Armoryx's anti-tampering and code signing verification.</li>
+            <li><strong>MASVS-RESILIENCE-2:</strong> Anti-debugging — covered by Armoryx's debugger detection and response mechanisms.</li>
+            <li><strong>MASVS-RESILIENCE-3:</strong> Reverse engineering prevention — covered by code obfuscation, string encryption, and control flow flattening.</li>
+            <li><strong>MASVS-RESILIENCE-4:</strong> Device integrity — covered by root/jailbreak detection with bypass-resistant multi-layer checks.</li>
+            <li><strong>MASVS-NETWORK-2:</strong> Certificate pinning — covered by dynamic certificate pinning with automatic rotation.</li>
+            <li><strong>MASVS-PLATFORM-3:</strong> Custom URL scheme validation — covered by input validation guards injected at the binary level.</li>
+          </ul>
+          <p>The key advantage of using automated tooling for MASVS compliance is consistency and maintenance. Manual implementations break with framework updates, get accidentally removed during refactoring, or have gaps in coverage. Binary-level protection ensures that every build meets requirements regardless of what developers change in source code.</p>
+          <p>For teams pursuing MASVS L2 + R compliance, runtime protection platforms eliminate months of manual security engineering and provide audit-ready evidence that controls are active on every release.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="logo">Armor<span>yx</span></a><p>AI-powered runtime application security for Android and iOS.</p></div>
+        <div class="footer-col"><h4>Product</h4><a href="features.html">Features</a><a href="features.html">App Shielding</a><a href="features.html">Runtime Protection</a></div>
+        <div class="footer-col"><h4>Resources</h4><a href="blog.html">Blog</a><a href="faqs.html">FAQs</a><a href="demo.html">Book a Demo</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="company.html">About</a><a href="company.html">Careers</a><a href="demo.html">Contact</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 Armoryx, Inc. All rights reserved.</p><div class="footer-links"><a href="#">Twitter</a><a href="#">LinkedIn</a><a href="#">GitHub</a></div></div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
