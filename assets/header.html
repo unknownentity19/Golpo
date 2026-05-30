@@ -1,0 +1,202 @@
+<header class="sticky top-0 z-50 h-14 border-b border-white/[0.08] bg-black/80 backdrop-blur-md">
+  <div class="mx-auto max-w-6xl px-6 flex h-full items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex items-center" aria-label="Golpo home">
+      <img src="/logo.svg" alt="Golpo" width="120" height="46" />
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="/" class="text-sm text-zinc-400 hover:text-white transition-colors">Home</a>
+
+      <!-- Product -->
+      <div class="dd relative h-14 flex items-center">
+        <button class="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition-colors h-14">
+          Product
+          <i data-lucide="chevron-down" class="dd-chev w-3.5 h-3.5 transition-transform"></i>
+        </button>
+        <div class="dd-panel absolute left-1/2 top-full w-72 rounded-xl border border-white/[0.08] bg-[#0a0a0a]/98 backdrop-blur-xl p-2 shadow-2xl">
+          <a href="/chat/" class="flex items-start gap-3 rounded-lg p-3 hover:bg-white/[0.04] transition-colors">
+            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10 border border-purple-500/20">
+              <i data-lucide="message-circle" class="w-4 h-4 text-purple-400"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-white">Companion</span>
+              <span class="block text-xs text-zinc-500 mt-0.5">Open the chat surface</span>
+            </span>
+          </a>
+          <a href="/features/" class="flex items-start gap-3 rounded-lg p-3 hover:bg-white/[0.04] transition-colors">
+            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10 border border-purple-500/20">
+              <i data-lucide="sparkles" class="w-4 h-4 text-purple-400"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-white">Features</span>
+              <span class="block text-xs text-zinc-500 mt-0.5">Memory, voice, and more</span>
+            </span>
+          </a>
+          <a href="/pricing/" class="flex items-start gap-3 rounded-lg p-3 hover:bg-white/[0.04] transition-colors">
+            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10 border border-purple-500/20">
+              <i data-lucide="credit-card" class="w-4 h-4 text-purple-400"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-white">Pricing</span>
+              <span class="block text-xs text-zinc-500 mt-0.5">Simple, fair plans</span>
+            </span>
+          </a>
+          <a href="/features/#voice" class="flex items-start gap-3 rounded-lg p-3 hover:bg-white/[0.04] transition-colors">
+            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10 border border-purple-500/20">
+              <i data-lucide="mic" class="w-4 h-4 text-purple-400"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-white">Voice Mode</span>
+              <span class="block text-xs text-zinc-500 mt-0.5">Talk in real time</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div class="dd relative h-14 flex items-center">
+        <button class="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition-colors h-14">
+          Resources
+          <i data-lucide="chevron-down" class="dd-chev w-3.5 h-3.5 transition-transform"></i>
+        </button>
+        <div class="dd-panel absolute left-1/2 top-full w-72 rounded-xl border border-white/[0.08] bg-[#0a0a0a]/98 backdrop-blur-xl p-2 shadow-2xl">
+          <a href="/docs/" class="flex items-start gap-3 rounded-lg p-3 hover:bg-white/[0.04] transition-colors">
+            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10 border border-purple-500/20">
+              <i data-lucide="book-open" class="w-4 h-4 text-purple-400"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-white">Docs</span>
+              <span class="block text-xs text-zinc-500 mt-0.5">Guides and concepts</span>
+            </span>
+          </a>
+          <a href="/changelog/" class="flex items-start gap-3 rounded-lg p-3 hover:bg-white/[0.04] transition-colors">
+            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10 border border-purple-500/20">
+              <i data-lucide="git-branch" class="w-4 h-4 text-purple-400"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-white">Changelog</span>
+              <span class="block text-xs text-zinc-500 mt-0.5">What is new</span>
+            </span>
+          </a>
+          <a href="/docs/#api" class="flex items-start gap-3 rounded-lg p-3 hover:bg-white/[0.04] transition-colors">
+            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10 border border-purple-500/20">
+              <i data-lucide="code-2" class="w-4 h-4 text-purple-400"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-white">API Reference</span>
+              <span class="block text-xs text-zinc-500 mt-0.5">Embed Golpo in any app</span>
+            </span>
+          </a>
+          <a href="/about/#community" class="flex items-start gap-3 rounded-lg p-3 hover:bg-white/[0.04] transition-colors">
+            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10 border border-purple-500/20">
+              <i data-lucide="users" class="w-4 h-4 text-purple-400"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-white">Community</span>
+              <span class="block text-xs text-zinc-500 mt-0.5">Join the conversation</span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Company -->
+      <div class="dd relative h-14 flex items-center">
+        <button class="inline-flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition-colors h-14">
+          Company
+          <i data-lucide="chevron-down" class="dd-chev w-3.5 h-3.5 transition-transform"></i>
+        </button>
+        <div class="dd-panel absolute left-1/2 top-full w-72 rounded-xl border border-white/[0.08] bg-[#0a0a0a]/98 backdrop-blur-xl p-2 shadow-2xl">
+          <a href="/about/" class="flex items-start gap-3 rounded-lg p-3 hover:bg-white/[0.04] transition-colors">
+            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10 border border-purple-500/20">
+              <i data-lucide="building-2" class="w-4 h-4 text-purple-400"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-white">About</span>
+              <span class="block text-xs text-zinc-500 mt-0.5">Our story and mission</span>
+            </span>
+          </a>
+          <a href="/about/#blog" class="flex items-start gap-3 rounded-lg p-3 hover:bg-white/[0.04] transition-colors">
+            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10 border border-purple-500/20">
+              <i data-lucide="newspaper" class="w-4 h-4 text-purple-400"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-white">Blog</span>
+              <span class="block text-xs text-zinc-500 mt-0.5">Notes from the team</span>
+            </span>
+          </a>
+          <a href="/about/#privacy" class="flex items-start gap-3 rounded-lg p-3 hover:bg-white/[0.04] transition-colors">
+            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10 border border-purple-500/20">
+              <i data-lucide="shield" class="w-4 h-4 text-purple-400"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-white">Privacy</span>
+              <span class="block text-xs text-zinc-500 mt-0.5">How we protect you</span>
+            </span>
+          </a>
+          <a href="/about/#contact" class="flex items-start gap-3 rounded-lg p-3 hover:bg-white/[0.04] transition-colors">
+            <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10 border border-purple-500/20">
+              <i data-lucide="mail" class="w-4 h-4 text-purple-400"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-sm font-medium text-white">Contact</span>
+              <span class="block text-xs text-zinc-500 mt-0.5">Reach the team</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Desktop auth -->
+    <div class="hidden md:flex items-center gap-3">
+      <a href="/sign-in/" class="text-sm text-zinc-400 hover:text-white transition-colors">Sign in</a>
+      <a href="/sign-up/" class="inline-flex items-center gap-2 border border-white/[0.1] px-4 py-2 text-sm text-zinc-200 hover:bg-white/[0.04] transition-colors">Sign up</a>
+    </div>
+
+    <!-- Mobile toggle -->
+    <button id="menu-toggle" type="button" aria-label="Toggle menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center text-zinc-300 hover:text-white">
+      <i data-lucide="menu" class="w-5 h-5 menu-icon-open"></i>
+      <i data-lucide="x" class="w-5 h-5 menu-icon-close hidden"></i>
+    </button>
+  </div>
+
+  <!-- Mobile overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 top-14 bg-black md:hidden z-40 overflow-y-auto">
+    <div class="px-6 py-8 flex flex-col h-full">
+      <div class="flex flex-col gap-8">
+        <div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Product</div>
+          <div class="flex flex-col gap-3">
+            <a href="/chat/" class="text-base text-zinc-300 hover:text-white">Companion</a>
+            <a href="/features/" class="text-base text-zinc-300 hover:text-white">Features</a>
+            <a href="/pricing/" class="text-base text-zinc-300 hover:text-white">Pricing</a>
+            <a href="/features/#voice" class="text-base text-zinc-300 hover:text-white">Voice Mode</a>
+          </div>
+        </div>
+        <div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Resources</div>
+          <div class="flex flex-col gap-3">
+            <a href="/docs/" class="text-base text-zinc-300 hover:text-white">Docs</a>
+            <a href="/changelog/" class="text-base text-zinc-300 hover:text-white">Changelog</a>
+            <a href="/docs/#api" class="text-base text-zinc-300 hover:text-white">API Reference</a>
+            <a href="/about/#community" class="text-base text-zinc-300 hover:text-white">Community</a>
+          </div>
+        </div>
+        <div>
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Company</div>
+          <div class="flex flex-col gap-3">
+            <a href="/about/" class="text-base text-zinc-300 hover:text-white">About</a>
+            <a href="/about/#blog" class="text-base text-zinc-300 hover:text-white">Blog</a>
+            <a href="/about/#privacy" class="text-base text-zinc-300 hover:text-white">Privacy</a>
+            <a href="/about/#contact" class="text-base text-zinc-300 hover:text-white">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-auto pt-12 flex flex-col gap-3">
+        <a href="/sign-in/" class="inline-flex items-center justify-center border border-white/[0.1] px-6 py-3 text-sm text-zinc-200 hover:bg-white/[0.04] transition-colors">Sign in</a>
+        <a href="/sign-up/" class="inline-flex items-center justify-center bg-purple-600 px-6 py-3 text-sm font-medium text-white hover:bg-purple-700 transition-colors">Sign up</a>
+      </div>
+    </div>
+  </div>
+</header>

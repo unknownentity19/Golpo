@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign up — Golpo</title>
+  <meta name="description" content="Meet your companion. Free forever, no credit card. Two minutes." />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="/assets/site.css" />
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="/assets/site.js" defer></script>
+</head>
+<body class="min-h-full flex flex-col">
+  <div id="header-slot"></div>
+
+  <main class="flex-1 flex items-center justify-center py-20 px-6">
+    <div class="w-full max-w-md fade-in">
+      <div class="border border-white/[0.08] bg-white/[0.02] p-8 md:p-10">
+        <div class="text-center mb-8">
+          <a href="/" class="inline-flex"><img src="/logo.svg" alt="Golpo" width="120" height="46" /></a>
+          <h1 class="mt-6 text-2xl md:text-3xl font-bold tracking-tight text-white">Meet your companion.</h1>
+          <p class="mt-2 text-sm text-zinc-500">Free forever. No credit card. Two minutes.</p>
+        </div>
+
+        <form class="flex flex-col gap-5">
+          <div>
+            <label class="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2 block">Your name</label>
+            <div class="relative">
+              <i data-lucide="user" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500"></i>
+              <input type="text" placeholder="What should we call you?" autocomplete="name" class="w-full bg-white/[0.04] border border-white/[0.08] pl-10 pr-3 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-purple-500/40 transition-colors" />
+            </div>
+          </div>
+
+          <div>
+            <label class="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2 block">Email</label>
+            <div class="relative">
+              <i data-lucide="mail" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500"></i>
+              <input type="email" placeholder="you@example.com" autocomplete="email" class="w-full bg-white/[0.04] border border-white/[0.08] pl-10 pr-3 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-purple-500/40 transition-colors" />
+            </div>
+          </div>
+
+          <div>
+            <label class="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-2 block">Password</label>
+            <div class="relative">
+              <i data-lucide="lock" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500"></i>
+              <input type="password" placeholder="At least 10 characters" autocomplete="new-password" class="w-full bg-white/[0.04] border border-white/[0.08] pl-10 pr-3 py-3 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-purple-500/40 transition-colors" />
+            </div>
+          </div>
+
+          <button type="submit" class="mt-2 inline-flex items-center justify-center gap-2 bg-purple-600 px-6 py-3 text-sm font-medium text-white hover:bg-purple-700 transition-colors">
+            Create account
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+
+          <p class="text-xs text-zinc-600 text-center leading-relaxed">By creating an account, you agree to our terms and our privacy policy. We don&rsquo;t train on your data &mdash; ever.</p>
+        </form>
+
+        <div class="mt-6 text-center text-sm text-zinc-500">
+          Already have an account? <a href="/sign-in/" class="text-purple-400 hover:text-purple-300">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-slot"></div>
+</body>
+</html>

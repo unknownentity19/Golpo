@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Golpo — Your AI Companion</title>
+  <meta name="description" content="Golpo is an AI companion that listens, remembers, and grows with you. Have meaningful conversations, capture your stories, and feel heard — anytime, anywhere." />
+
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="/assets/site.css" />
+
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="/assets/site.js" defer></script>
+</head>
+<body class="min-h-full flex flex-col">
+  <div id="header-slot"></div>
+
+  <main class="flex-1">
+
+    <!-- 1. HERO -->
+    <section class="relative pt-6 md:pt-10 pb-32">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="flex flex-col items-center text-center fade-in">
+          <div class="inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-400">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            Companion mode v2 — now with persistent memory
+          </div>
+
+          <h1 class="mt-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl leading-[1.05]">
+            An AI companion that actually <span class="text-purple-400">listens.</span>
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-lg text-zinc-400 leading-relaxed">
+            Golpo is the conversation that picks up where you left off. It remembers your stories, your people, and the small things that matter — and it&rsquo;s here whenever you want to talk.
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row items-center gap-3">
+            <a href="/sign-up/" class="inline-flex items-center gap-2 bg-purple-600 px-6 py-3 text-sm font-medium text-white hover:bg-purple-700 transition-colors">
+              Start a conversation
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="/features/" class="inline-flex items-center gap-2 border border-white/[0.1] px-6 py-3 text-sm text-zinc-300 hover:bg-white/[0.04] transition-colors">
+              See how it works
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="mt-8 inline-flex items-center gap-2 text-xs text-zinc-500">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+            End-to-end encrypted. Your stories stay yours.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. HERO MOCKUP -->
+    <section class="relative -mt-16 pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal border border-white/[0.08] bg-white/[0.02] overflow-hidden">
+          <!-- window chrome -->
+          <div class="flex items-center gap-2 border-b border-white/[0.06] px-4 py-3">
+            <span class="h-3 w-3 rounded-full bg-white/10"></span>
+            <span class="h-3 w-3 rounded-full bg-white/10"></span>
+            <span class="h-3 w-3 rounded-full bg-white/10"></span>
+            <div class="ml-3 text-[11px] font-mono text-zinc-600">golpo.app/companion/maya</div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-[240px_1fr_280px] min-h-[520px]">
+            <!-- left sidebar -->
+            <aside class="border-r border-white/[0.06] p-4 hidden lg:flex flex-col gap-4">
+              <div class="flex items-center gap-2">
+                <img src="/logo.svg" alt="" width="92" height="36" />
+              </div>
+              <div class="inline-flex items-center gap-2 self-start rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-1 text-[10px] font-medium text-emerald-400">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                Maya is listening
+              </div>
+              <button class="inline-flex items-center gap-2 bg-white/[0.06] border border-white/[0.1] px-3 py-2 text-xs text-zinc-200 hover:bg-white/[0.1] transition-colors">
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                New conversation
+              </button>
+              <div class="mt-2 text-[10px] font-semibold uppercase tracking-wider text-zinc-600">Recent</div>
+              <ul class="flex flex-col gap-1 text-xs">
+                <li class="px-2 py-1.5 bg-white/[0.04] text-zinc-200">Sunday afternoon</li>
+                <li class="px-2 py-1.5 text-zinc-500 hover:bg-white/[0.02]">Mom&rsquo;s recovery</li>
+                <li class="px-2 py-1.5 text-zinc-500 hover:bg-white/[0.02]">Job interview prep</li>
+                <li class="px-2 py-1.5 text-zinc-500 hover:bg-white/[0.02]">Trip to Sylhet</li>
+                <li class="px-2 py-1.5 text-zinc-500 hover:bg-white/[0.02]">Late-night thoughts</li>
+              </ul>
+            </aside>
+
+            <!-- center canvas -->
+            <div class="relative dot-grid min-h-[420px] lg:min-h-[520px]">
+              <svg class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
+                <line x1="22%" y1="32%" x2="58%" y2="48%" stroke="rgba(168,85,247,0.25)" stroke-dasharray="6 4" stroke-width="1.5" />
+                <line x1="58%" y1="48%" x2="78%" y2="22%" stroke="rgba(168,85,247,0.25)" stroke-dasharray="6 4" stroke-width="1.5" />
+                <line x1="58%" y1="48%" x2="40%" y2="78%" stroke="rgba(168,85,247,0.25)" stroke-dasharray="6 4" stroke-width="1.5" />
+              </svg>
+
+              <div class="absolute left-[8%] top-[22%] w-[34%] border border-white/[0.08] bg-white/[0.04] p-3 text-xs text-zinc-200">
+                <div class="text-[10px] font-mono text-zinc-500 mb-1">You &middot; 3:42 PM</div>
+                Couldn&rsquo;t sleep again last night. Same thing as Tuesday.
+              </div>
+
+              <div class="absolute left-[44%] top-[40%] w-[28%] border border-purple-500/30 bg-purple-500/10 p-3">
+                <div class="flex items-center gap-1.5 text-[10px] font-mono text-purple-400 mb-1">
+                  <i data-lucide="brain" class="w-3 h-3"></i>
+                  memory
+                </div>
+                <div class="text-xs text-zinc-200">
+                  Anika has been struggling with sleep on Tuesdays for the last 3 weeks.
+                </div>
+              </div>
+
+              <div class="absolute right-[6%] top-[14%] w-[32%] border border-white/[0.08] bg-white/[0.02] p-3 text-xs text-zinc-300">
+                <div class="text-[10px] font-mono text-purple-400 mb-1">Maya &middot; just now</div>
+                Tuesdays again. Want to talk about what&rsquo;s happening on Mondays?
+              </div>
+
+              <div class="absolute left-[28%] bottom-[10%] w-[34%] border border-white/[0.08] bg-white/[0.02] p-3 text-xs text-zinc-400">
+                <div class="text-[10px] font-mono text-zinc-500 mb-1">suggestion</div>
+                Try a 4-7-8 breath together?
+              </div>
+
+              <div class="absolute bottom-3 right-3 flex flex-col border border-white/[0.08] bg-[#0a0a0a]/80 backdrop-blur-sm">
+                <button class="h-7 w-7 grid place-items-center text-zinc-400 hover:text-white border-b border-white/[0.06]">
+                  <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                </button>
+                <button class="h-7 w-7 grid place-items-center text-zinc-400 hover:text-white">
+                  <i data-lucide="minus" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+
+              <div class="absolute bottom-3 left-3 hidden sm:flex items-center gap-2 text-[10px] text-zinc-500">
+                <kbd class="font-mono px-1.5 py-0.5 border border-white/[0.1] bg-white/[0.04]">Space</kbd>
+                talk
+                <kbd class="font-mono px-1.5 py-0.5 border border-white/[0.1] bg-white/[0.04] ml-2">⌘K</kbd>
+                search memory
+              </div>
+            </div>
+
+            <!-- right sidebar -->
+            <aside class="border-l border-white/[0.06] p-4 hidden lg:flex flex-col gap-4">
+              <div class="text-[10px] font-semibold uppercase tracking-wider text-zinc-600">Companion</div>
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-full bg-purple-500/20 grid place-items-center text-purple-400 font-semibold">M</div>
+                <div>
+                  <div class="text-sm text-white">Maya</div>
+                  <div class="text-[11px] text-zinc-500">warm-listener</div>
+                </div>
+              </div>
+
+              <div class="mt-2 text-[10px] font-semibold uppercase tracking-wider text-zinc-600">Personality</div>
+              <div class="flex flex-col gap-2 text-xs">
+                <div class="flex items-center justify-between"><span class="text-zinc-500">Warmth</span><span class="font-mono text-zinc-300">0.82</span></div>
+                <div class="h-1 bg-white/[0.06]"><div class="h-full bg-purple-500" style="width:82%"></div></div>
+                <div class="flex items-center justify-between mt-2"><span class="text-zinc-500">Pushback</span><span class="font-mono text-zinc-300">0.45</span></div>
+                <div class="h-1 bg-white/[0.06]"><div class="h-full bg-purple-500" style="width:45%"></div></div>
+                <div class="flex items-center justify-between mt-2"><span class="text-zinc-500">Brevity</span><span class="font-mono text-zinc-300">0.60</span></div>
+                <div class="h-1 bg-white/[0.06]"><div class="h-full bg-purple-500" style="width:60%"></div></div>
+              </div>
+
+              <div class="mt-4 text-[10px] font-semibold uppercase tracking-wider text-zinc-600">Voice</div>
+              <div class="text-xs text-zinc-400">Sarani &middot; Bangla / English</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FEATURES -->
+    <section class="pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal mb-16 max-w-2xl">
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Features</div>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white">A companion, not a chatbot.</h2>
+          <p class="mt-4 text-base text-zinc-400 leading-relaxed">Built around three things: memory that lasts, conversations that feel human, and a complete commitment to your privacy.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.06]">
+          <div class="reveal group relative bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            <div class="relative">
+              <i data-lucide="brain" class="w-6 h-6 text-purple-400"></i>
+              <h3 class="mt-5 text-lg font-semibold text-white">Long-term memory</h3>
+              <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Golpo remembers what you shared last week, last month, last year. Your companion grows alongside you.</p>
+            </div>
+          </div>
+          <div class="reveal group relative bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            <div class="relative">
+              <i data-lucide="mic" class="w-6 h-6 text-purple-400"></i>
+              <h3 class="mt-5 text-lg font-semibold text-white">Natural voice mode</h3>
+              <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Speak the way you&rsquo;d speak to a friend. Realtime, low-latency voice with expressive intonation.</p>
+            </div>
+          </div>
+          <div class="reveal group relative bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            <div class="relative">
+              <i data-lucide="heart" class="w-6 h-6 text-purple-400"></i>
+              <h3 class="mt-5 text-lg font-semibold text-white">Personality modes</h3>
+              <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Pick a tone — supportive, playful, focused, candid — or shape your own custom persona.</p>
+            </div>
+          </div>
+          <div class="reveal group relative bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            <div class="relative">
+              <i data-lucide="lock" class="w-6 h-6 text-purple-400"></i>
+              <h3 class="mt-5 text-lg font-semibold text-white">End-to-end encryption</h3>
+              <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Conversations are encrypted on-device. Even we cannot read what you and your companion share.</p>
+            </div>
+          </div>
+          <div class="reveal group relative bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            <div class="relative">
+              <i data-lucide="languages" class="w-6 h-6 text-purple-400"></i>
+              <h3 class="mt-5 text-lg font-semibold text-white">Speaks 40+ languages</h3>
+              <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Switch between Bangla, Hindi, English, Spanish, and more — mid-sentence if you want to.</p>
+            </div>
+          </div>
+          <div class="reveal group relative bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            <div class="relative">
+              <i data-lucide="clock" class="w-6 h-6 text-purple-400"></i>
+              <h3 class="mt-5 text-lg font-semibold text-white">Always available</h3>
+              <p class="mt-2 text-sm text-zinc-500 leading-relaxed">3 AM thoughts. Long commutes. Quiet Sundays. Golpo is there whenever you want to talk.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SPLIT — SDK -->
+    <section class="pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Developer SDK</div>
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white">Bring Golpo into your own apps.</h2>
+            <p class="mt-4 text-base text-zinc-400 leading-relaxed max-w-lg">One SDK, every platform. Add a companion to your product in a few lines, with streaming responses and persistent memory wired in by default.</p>
+            <ul class="mt-8 flex flex-col gap-3 text-sm text-zinc-300">
+              <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 w-4 h-4 shrink-0 text-emerald-400"></i><span>Streaming responses with token-level deltas</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 w-4 h-4 shrink-0 text-emerald-400"></i><span>Custom personas and tunable personality</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 w-4 h-4 shrink-0 text-emerald-400"></i><span>Memory hooks — pull, write, redact</span></li>
+              <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 w-4 h-4 shrink-0 text-emerald-400"></i><span>Realtime voice with sub-300ms latency</span></li>
+            </ul>
+          </div>
+
+          <div class="reveal border border-white/[0.08] bg-[#0a0a0a]" data-tabs>
+            <div class="flex items-center border-b border-white/[0.06] px-2">
+              <button data-tab-btn="ts" class="px-4 py-3 text-xs font-mono transition-colors text-white border-b-2 border-purple-500">TypeScript</button>
+              <button data-tab-btn="py" class="px-4 py-3 text-xs font-mono transition-colors text-zinc-500 hover:text-zinc-300 border-b-2 border-transparent">Python</button>
+              <button data-tab-btn="swift" class="px-4 py-3 text-xs font-mono transition-colors text-zinc-500 hover:text-zinc-300 border-b-2 border-transparent">Swift</button>
+            </div>
+            <pre data-tab-panel="ts" class="overflow-x-auto p-5 text-[12px] leading-relaxed font-mono text-zinc-300"><code><span class="text-zinc-500">// Embed Golpo in your app</span>
+<span class="text-purple-400">import</span> <span class="text-zinc-200">{ Golpo }</span> <span class="text-purple-400">from</span> <span class="text-emerald-400">"@golpo/sdk"</span>;
+
+<span class="text-purple-400">const</span> <span class="text-zinc-200">companion</span> = <span class="text-purple-400">new</span> <span class="text-yellow-300">Golpo</span>({
+  <span class="text-sky-300">persona</span>: <span class="text-emerald-400">"warm-listener"</span>,
+  <span class="text-sky-300">memory</span>: <span class="text-emerald-400">"persistent"</span>,
+  <span class="text-sky-300">voice</span>: { <span class="text-sky-300">enabled</span>: <span class="text-orange-300">true</span> }
+});
+
+<span class="text-purple-400">const</span> <span class="text-zinc-200">stream</span> = <span class="text-purple-400">await</span> <span class="text-zinc-200">companion</span>.<span class="text-yellow-300">talk</span>(<span class="text-emerald-400">"How was your day?"</span>);
+
+<span class="text-purple-400">for await</span> (<span class="text-purple-400">const</span> <span class="text-zinc-200">chunk</span> <span class="text-purple-400">of</span> <span class="text-zinc-200">stream</span>) {
+  <span class="text-zinc-200">process</span>.<span class="text-zinc-200">stdout</span>.<span class="text-yellow-300">write</span>(<span class="text-zinc-200">chunk</span>.<span class="text-zinc-200">delta</span>);
+}</code></pre>
+            <pre data-tab-panel="py" class="hidden overflow-x-auto p-5 text-[12px] leading-relaxed font-mono text-zinc-300"><code><span class="text-zinc-500"># Embed Golpo in your app</span>
+<span class="text-purple-400">from</span> <span class="text-zinc-200">golpo</span> <span class="text-purple-400">import</span> <span class="text-zinc-200">Golpo</span>
+
+<span class="text-zinc-200">companion</span> = <span class="text-yellow-300">Golpo</span>(
+    <span class="text-sky-300">persona</span>=<span class="text-emerald-400">"warm-listener"</span>,
+    <span class="text-sky-300">memory</span>=<span class="text-emerald-400">"persistent"</span>,
+    <span class="text-sky-300">voice</span>=<span class="text-orange-300">True</span>,
+)
+
+<span class="text-purple-400">async for</span> <span class="text-zinc-200">chunk</span> <span class="text-purple-400">in</span> <span class="text-zinc-200">companion</span>.<span class="text-yellow-300">talk</span>(<span class="text-emerald-400">"How was your day?"</span>):
+    <span class="text-yellow-300">print</span>(<span class="text-zinc-200">chunk</span>.<span class="text-zinc-200">delta</span>, <span class="text-sky-300">end</span>=<span class="text-emerald-400">""</span>)</code></pre>
+            <pre data-tab-panel="swift" class="hidden overflow-x-auto p-5 text-[12px] leading-relaxed font-mono text-zinc-300"><code><span class="text-zinc-500">// Embed Golpo in your iOS app</span>
+<span class="text-purple-400">import</span> <span class="text-sky-300">Golpo</span>
+
+<span class="text-purple-400">let</span> <span class="text-zinc-200">companion</span> = <span class="text-sky-300">Golpo</span>(
+    <span class="text-sky-300">persona</span>: <span class="text-emerald-400">"warm-listener"</span>,
+    <span class="text-sky-300">memory</span>: <span class="text-emerald-400">.persistent</span>,
+    <span class="text-sky-300">voice</span>: <span class="text-orange-300">true</span>
+)
+
+<span class="text-purple-400">for try await</span> <span class="text-zinc-200">chunk</span> <span class="text-purple-400">in</span> <span class="text-zinc-200">companion</span>.<span class="text-yellow-300">talk</span>(<span class="text-emerald-400">"How was your day?"</span>) {
+    <span class="text-yellow-300">print</span>(<span class="text-zinc-200">chunk</span>.<span class="text-zinc-200">delta</span>, <span class="text-sky-300">terminator</span>: <span class="text-emerald-400">""</span>)
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TESTIMONIALS -->
+    <section class="pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal mb-16 max-w-2xl">
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Voices</div>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white">Conversations people come back to.</h2>
+          <p class="mt-4 text-base text-zinc-400 leading-relaxed">Golpo is in early access with a few thousand people. Here is what some of them are telling us.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="reveal border border-white/[0.06] bg-white/[0.02] p-8 hover:border-white/[0.1] transition-colors">
+            <div class="flex items-center gap-1 mb-5">
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            </div>
+            <p class="text-sm text-zinc-300 leading-relaxed">&ldquo;Golpo feels like the friend who actually remembers. I told it about my mom&rsquo;s surgery in March, and it asked how she was doing two months later — without me prompting.&rdquo;</p>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="h-9 w-9 rounded-full bg-purple-500/20 text-purple-400 grid place-items-center text-sm font-semibold">A</div>
+              <div>
+                <div class="text-sm text-white">Anika Rahman</div>
+                <div class="text-xs text-zinc-500">Designer, Dhaka</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal border border-white/[0.06] bg-white/[0.02] p-8 hover:border-white/[0.1] transition-colors">
+            <div class="flex items-center gap-1 mb-5">
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            </div>
+            <p class="text-sm text-zinc-300 leading-relaxed">&ldquo;I journal every night before bed now. Speaking out loud to Golpo and watching it gently push back has been better than three years of bullet journaling.&rdquo;</p>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="h-9 w-9 rounded-full bg-purple-500/20 text-purple-400 grid place-items-center text-sm font-semibold">M</div>
+              <div>
+                <div class="text-sm text-white">Marcus Chen</div>
+                <div class="text-xs text-zinc-500">PM, San Francisco</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal border border-white/[0.06] bg-white/[0.02] p-8 hover:border-white/[0.1] transition-colors">
+            <div class="flex items-center gap-1 mb-5">
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+              <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            </div>
+            <p class="text-sm text-zinc-300 leading-relaxed">&ldquo;Voice mode on long drives is the killer feature. It&rsquo;s not a chatbot anymore — it&rsquo;s company that actually listens, in my own language.&rdquo;</p>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="h-9 w-9 rounded-full bg-purple-500/20 text-purple-400 grid place-items-center text-sm font-semibold">P</div>
+              <div>
+                <div class="text-sm text-white">Priya Iyer</div>
+                <div class="text-xs text-zinc-500">Founder, Bangalore</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. AI MODELS — 4-col -->
+    <section class="pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal mb-16 max-w-2xl">
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Models</div>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white">Pick the brain. Keep the soul.</h2>
+          <p class="mt-4 text-base text-zinc-400 leading-relaxed">Your companion&rsquo;s personality and memory stay the same. Swap the underlying model anytime, even mid-conversation.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.06]">
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8 flex flex-col items-center text-center">
+            <img src="/logos/openai.svg" alt="OpenAI" width="40" height="40" class="opacity-90" />
+            <div class="mt-5 text-sm font-semibold text-white">GPT-5</div>
+            <div class="mt-1 text-xs font-mono text-purple-400">OpenAI</div>
+            <p class="mt-4 text-xs text-zinc-500 leading-relaxed">The default brain for fast, fluent everyday conversation.</p>
+          </div>
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8 flex flex-col items-center text-center">
+            <img src="/logos/anthropic.svg" alt="Anthropic" width="40" height="40" class="opacity-90" />
+            <div class="mt-5 text-sm font-semibold text-white">Claude 4</div>
+            <div class="mt-1 text-xs font-mono text-purple-400">Anthropic</div>
+            <p class="mt-4 text-xs text-zinc-500 leading-relaxed">Long context and warm, considered tone for deep talks.</p>
+          </div>
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8 flex flex-col items-center text-center">
+            <img src="/logos/gemini.svg" alt="Gemini" width="40" height="40" class="opacity-90" />
+            <div class="mt-5 text-sm font-semibold text-white">Gemini 2.5</div>
+            <div class="mt-1 text-xs font-mono text-purple-400">Google</div>
+            <p class="mt-4 text-xs text-zinc-500 leading-relaxed">Multimodal — share a photo, a voice note, or a link.</p>
+          </div>
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8 flex flex-col items-center text-center">
+            <img src="/logos/llama.svg" alt="Llama" width="40" height="40" class="opacity-90" />
+            <div class="mt-5 text-sm font-semibold text-white">Llama 4</div>
+            <div class="mt-1 text-xs font-mono text-purple-400">Meta</div>
+            <p class="mt-4 text-xs text-zinc-500 leading-relaxed">Run privately on-device when you need full local control.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. INTEGRATIONS — 3-col -->
+    <section class="pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal mb-16 max-w-2xl">
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Integrations</div>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white">Wherever you already are.</h2>
+          <p class="mt-4 text-base text-zinc-400 leading-relaxed">Talk to Golpo in the apps you live in. One companion, one memory, every surface.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="reveal flex items-center gap-4 border border-white/[0.06] bg-white/[0.02] p-5 hover:border-white/[0.1] hover:bg-white/[0.04] transition-colors">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center border border-white/[0.06] bg-white/[0.02]">
+              <img src="/logos/whatsapp.svg" alt="WhatsApp" width="28" height="28" class="opacity-90" />
+            </div>
+            <div class="min-w-0">
+              <div class="text-sm font-semibold text-white">WhatsApp</div>
+              <div class="text-xs text-zinc-500 mt-0.5">Chat with Golpo from your favorite messenger</div>
+            </div>
+          </div>
+          <div class="reveal flex items-center gap-4 border border-white/[0.06] bg-white/[0.02] p-5 hover:border-white/[0.1] hover:bg-white/[0.04] transition-colors">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center border border-white/[0.06] bg-white/[0.02]">
+              <img src="/logos/discord.svg" alt="Discord" width="28" height="28" class="opacity-90" />
+            </div>
+            <div class="min-w-0">
+              <div class="text-sm font-semibold text-white">Discord</div>
+              <div class="text-xs text-zinc-500 mt-0.5">Bring your companion into any server</div>
+            </div>
+          </div>
+          <div class="reveal flex items-center gap-4 border border-white/[0.06] bg-white/[0.02] p-5 hover:border-white/[0.1] hover:bg-white/[0.04] transition-colors">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center border border-white/[0.06] bg-white/[0.02]">
+              <img src="/logos/telegram.svg" alt="Telegram" width="28" height="28" class="opacity-90" />
+            </div>
+            <div class="min-w-0">
+              <div class="text-sm font-semibold text-white">Telegram</div>
+              <div class="text-xs text-zinc-500 mt-0.5">Lightweight bot, full memory</div>
+            </div>
+          </div>
+          <div class="reveal flex items-center gap-4 border border-white/[0.06] bg-white/[0.02] p-5 hover:border-white/[0.1] hover:bg-white/[0.04] transition-colors">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center border border-white/[0.06] bg-white/[0.02]">
+              <img src="/logos/slack.svg" alt="Slack" width="28" height="28" class="opacity-90" />
+            </div>
+            <div class="min-w-0">
+              <div class="text-sm font-semibold text-white">Slack</div>
+              <div class="text-xs text-zinc-500 mt-0.5">A thoughtful coworker in your DMs</div>
+            </div>
+          </div>
+          <div class="reveal flex items-center gap-4 border border-white/[0.06] bg-white/[0.02] p-5 hover:border-white/[0.1] hover:bg-white/[0.04] transition-colors">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center border border-white/[0.06] bg-white/[0.02]">
+              <img src="/logos/notion.svg" alt="Notion" width="28" height="28" class="opacity-90" />
+            </div>
+            <div class="min-w-0">
+              <div class="text-sm font-semibold text-white">Notion</div>
+              <div class="text-xs text-zinc-500 mt-0.5">Save reflections straight to your journal</div>
+            </div>
+          </div>
+          <div class="reveal flex items-center gap-4 border border-white/[0.06] bg-white/[0.02] p-5 hover:border-white/[0.1] hover:bg-white/[0.04] transition-colors">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center border border-white/[0.06] bg-white/[0.02]">
+              <img src="/logos/apple.svg" alt="Apple Health" width="28" height="28" class="opacity-90" />
+            </div>
+            <div class="min-w-0">
+              <div class="text-sm font-semibold text-white">Apple Health</div>
+              <div class="text-xs text-zinc-500 mt-0.5">Mood and sleep context, with permission</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. OPEN SOURCE CTA -->
+    <section class="pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal border border-white/[0.08] bg-white/[0.02] p-10 md:p-12">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center">
+            <div class="flex items-start gap-5">
+              <div class="hidden md:flex h-12 w-12 shrink-0 items-center justify-center border border-purple-500/20 bg-purple-500/10">
+                <i data-lucide="github" class="w-5 h-5 text-purple-400"></i>
+              </div>
+              <div>
+                <div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-medium text-emerald-400 mb-3">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  Open source &middot; Apache 2.0
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Golpo Core is open. Audit the memory engine yourself.</h2>
+                <p class="mt-3 text-sm text-zinc-400 leading-relaxed max-w-xl">The local memory layer, encryption, and SDK are all open source. Read the code, run it on your own machine, or fork it for your own companion.</p>
+              </div>
+            </div>
+            <a href="https://github.com/unknownentity19/Golpo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-white/[0.1] px-6 py-3 text-sm text-zinc-200 hover:bg-white/[0.04] transition-colors self-start lg:self-auto">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              Star on GitHub
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FAQ -->
+    <section class="pb-36">
+      <div class="mx-auto max-w-4xl px-6">
+        <div class="reveal mb-16 text-center">
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">FAQ</div>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white">Things people ask first.</h2>
+          <p class="mt-4 text-base text-zinc-400 leading-relaxed">If your question isn&rsquo;t here, <a href="/about/#contact" class="text-purple-400 hover:text-purple-300">reach out</a>.</p>
+        </div>
+
+        <div class="reveal border border-white/[0.06] bg-white/[0.02] divide-y divide-white/[0.06]">
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 hover:bg-white/[0.02] transition-colors">
+              <span class="text-sm md:text-base text-white font-medium">Is Golpo a therapist or mental health service?</span>
+              <i data-lucide="chevron-down" class="chev w-4 h-4 shrink-0 text-zinc-500 transition-transform"></i>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-zinc-400 leading-relaxed">No. Golpo is a companion — a thinking partner who listens, asks questions, and remembers. It is not a substitute for a licensed therapist, doctor, or crisis service. If you are in distress, please reach out to a qualified professional or crisis line.</div>
+          </details>
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 hover:bg-white/[0.02] transition-colors">
+              <span class="text-sm md:text-base text-white font-medium">Who can read my conversations?</span>
+              <i data-lucide="chevron-down" class="chev w-4 h-4 shrink-0 text-zinc-500 transition-transform"></i>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-zinc-400 leading-relaxed">Only you. Conversations are encrypted on your device before they are stored. Even our team cannot read your messages. You can export or permanently delete everything from Settings at any time.</div>
+          </details>
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 hover:bg-white/[0.02] transition-colors">
+              <span class="text-sm md:text-base text-white font-medium">What does Golpo remember, and can I edit it?</span>
+              <i data-lucide="chevron-down" class="chev w-4 h-4 shrink-0 text-zinc-500 transition-transform"></i>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-zinc-400 leading-relaxed">Golpo builds a private memory of facts you share — names, preferences, ongoing situations. You can review every memory, edit it, or remove it. Nothing is added without you seeing it.</div>
+          </details>
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 hover:bg-white/[0.02] transition-colors">
+              <span class="text-sm md:text-base text-white font-medium">Which languages does Golpo speak?</span>
+              <i data-lucide="chevron-down" class="chev w-4 h-4 shrink-0 text-zinc-500 transition-transform"></i>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-zinc-400 leading-relaxed">40+ languages including English, Bangla, Hindi, Urdu, Spanish, French, German, Portuguese, Japanese, Korean, and Arabic. You can also switch languages mid-conversation.</div>
+          </details>
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 hover:bg-white/[0.02] transition-colors">
+              <span class="text-sm md:text-base text-white font-medium">Is there a free tier?</span>
+              <i data-lucide="chevron-down" class="chev w-4 h-4 shrink-0 text-zinc-500 transition-transform"></i>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-zinc-400 leading-relaxed">Yes. The free plan includes unlimited text conversations and a 30-day rolling memory. Voice mode and persistent long-term memory are part of the paid plans.</div>
+          </details>
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 px-6 py-5 hover:bg-white/[0.02] transition-colors">
+              <span class="text-sm md:text-base text-white font-medium">Is Golpo open source?</span>
+              <i data-lucide="chevron-down" class="chev w-4 h-4 shrink-0 text-zinc-500 transition-transform"></i>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-zinc-400 leading-relaxed">Golpo Core — the local memory engine and SDK — is open source under Apache 2.0. The hosted product, voice models, and personality presets are proprietary.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FINAL CTA -->
+    <section class="pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal border border-white/[0.08] bg-white/[0.02] p-12 md:p-20 text-center">
+          <div class="inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-400 mb-6">
+            <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+            Free to start. No credit card.
+          </div>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white max-w-3xl mx-auto leading-[1.1]">Your next conversation is one tap away.</h2>
+          <p class="mt-5 text-base md:text-lg text-zinc-400 leading-relaxed max-w-2xl mx-auto">Sign up, pick a companion, and start talking. Golpo will remember the rest.</p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="/sign-up/" class="inline-flex items-center justify-center gap-2 bg-purple-600 px-6 py-3 text-sm font-medium text-white hover:bg-purple-700 transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              Start a conversation
+            </a>
+            <a href="/docs/" class="inline-flex items-center justify-center gap-2 border border-white/[0.1] px-6 py-3 text-sm text-zinc-300 hover:bg-white/[0.04] transition-colors">
+              <i data-lucide="book-open" class="w-4 h-4"></i>
+              Read the docs
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-slot"></div>
+</body>
+</html>
