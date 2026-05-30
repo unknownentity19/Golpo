@@ -1,0 +1,108 @@
+/* ========== Globals ========== */
+html, body { background: #000000; }
+body {
+  color: #a1a1aa;
+  font-family: 'Geist', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.font-mono,
+code, kbd, pre, samp,
+[data-mono] {
+  font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* Selection */
+::selection { background: rgba(168, 85, 247, 0.3); color: #fff; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+
+/* Native details */
+details summary::-webkit-details-marker { display: none; }
+details summary { list-style: none; }
+details[open] > summary > .chev { transform: rotate(180deg); }
+
+/* ========== Reveal-on-scroll ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .5s ease, transform .5s ease;
+  will-change: opacity, transform;
+}
+.reveal.in { opacity: 1; transform: none; }
+
+/* Hero entrance (no observer needed) */
+.fade-in {
+  animation: fade-in .6s ease both;
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ========== Header dropdowns ========== */
+.dd-panel {
+  opacity: 0;
+  transform: translate(-50%, 6px) scale(.98);
+  pointer-events: none;
+  transition: opacity .15s ease, transform .15s ease;
+}
+.dd:hover > .dd-panel,
+.dd:focus-within > .dd-panel {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+  pointer-events: auto;
+}
+.dd:hover > button .dd-chev { transform: rotate(180deg); }
+
+/* Mobile menu open */
+body.menu-open { overflow: hidden; }
+
+/* Lucide sizing — inherit from parent class, no flex shrink */
+[data-lucide] { flex-shrink: 0; }
+
+/* Range input */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255,255,255,0.06);
+  height: 4px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #a855f7;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #a855f7;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+/* Subtle footer grid */
+.footer-grid {
+  background-image:
+    linear-gradient(to right, #ffffff 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.02;
+}
+
+/* Canvas dot grid */
+.dot-grid {
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.dot-grid-lg {
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}

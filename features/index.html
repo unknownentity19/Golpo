@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Features — Golpo</title>
+  <meta name="description" content="Memory that lasts, conversations that feel human, complete privacy. The full feature breakdown of Golpo, your AI companion." />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="/assets/site.css" />
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="/assets/site.js" defer></script>
+</head>
+<body class="min-h-full flex flex-col">
+  <div id="header-slot"></div>
+
+  <main class="flex-1">
+    <!-- Hero -->
+    <section class="pt-16 md:pt-24 pb-32">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="max-w-3xl fade-in">
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Features</div>
+          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.05]">
+            Everything you&rsquo;d expect from a friend who&rsquo;s <span class="text-purple-400">always around.</span>
+          </h1>
+          <p class="mt-6 text-lg text-zinc-400 leading-relaxed">
+            Golpo is built around four ideas: real memory, real conversation, real privacy, and real availability. Here is how each one shows up in the product.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Memory -->
+    <section id="memory" class="pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal mb-16 max-w-2xl">
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Memory</div>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white">A memory you can actually trust.</h2>
+          <p class="mt-4 text-base text-zinc-400 leading-relaxed">Every fact your companion learns is visible, editable, and yours to remove. Memory is the difference between a chatbot and a companion.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.06]">
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <i data-lucide="brain" class="w-6 h-6 text-purple-400"></i>
+            <h3 class="mt-5 text-lg font-semibold text-white">Persistent long-term memory</h3>
+            <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Names, places, ongoing situations — all retained across sessions, devices, and years.</p>
+          </div>
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <i data-lucide="layers" class="w-6 h-6 text-purple-400"></i>
+            <h3 class="mt-5 text-lg font-semibold text-white">Episodic + semantic recall</h3>
+            <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Golpo remembers both the moment and the meaning. Ask about Tuesday or about your sleep pattern.</p>
+          </div>
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <i data-lucide="git-branch" class="w-6 h-6 text-purple-400"></i>
+            <h3 class="mt-5 text-lg font-semibold text-white">Editable memory graph</h3>
+            <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Open the memory inspector, audit every entry, edit phrasing, or wipe a topic in one click.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conversation -->
+    <section id="voice" class="pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal mb-16 max-w-2xl">
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Conversation</div>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white">Talk like you would to a friend.</h2>
+          <p class="mt-4 text-base text-zinc-400 leading-relaxed">Voice, text, photos — Golpo meets you where you are and adjusts its tone to your mood and the moment.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.06]">
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <i data-lucide="mic" class="w-6 h-6 text-purple-400"></i>
+            <h3 class="mt-5 text-lg font-semibold text-white">Realtime voice</h3>
+            <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Sub-300ms latency with natural intonation and graceful interruptions.</p>
+          </div>
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <i data-lucide="heart" class="w-6 h-6 text-purple-400"></i>
+            <h3 class="mt-5 text-lg font-semibold text-white">Adjustable personality</h3>
+            <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Tune warmth, brevity, pushback, and humor. Save presets per situation.</p>
+          </div>
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <i data-lucide="image" class="w-6 h-6 text-purple-400"></i>
+            <h3 class="mt-5 text-lg font-semibold text-white">Multimodal context</h3>
+            <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Drop a photo, share a voice note, paste a link — Golpo understands all three.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust -->
+    <section id="trust" class="pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal mb-16 max-w-2xl">
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Trust</div>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white">Privacy is the product.</h2>
+          <p class="mt-4 text-base text-zinc-400 leading-relaxed">We designed Golpo so even we can&rsquo;t read your messages. Every choice in the stack starts here.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.06]">
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <i data-lucide="lock" class="w-6 h-6 text-purple-400"></i>
+            <h3 class="mt-5 text-lg font-semibold text-white">End-to-end encryption</h3>
+            <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Conversations and memories are encrypted on-device with keys only you hold.</p>
+          </div>
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <i data-lucide="shield-check" class="w-6 h-6 text-purple-400"></i>
+            <h3 class="mt-5 text-lg font-semibold text-white">Zero training on your data</h3>
+            <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Your messages never leave to train a model. Period. No opt-out needed.</p>
+          </div>
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <i data-lucide="bell" class="w-6 h-6 text-purple-400"></i>
+            <h3 class="mt-5 text-lg font-semibold text-white">Quiet by default</h3>
+            <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Golpo doesn&rsquo;t ping you. It waits for you. Set check-ins only if you want them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Everywhere -->
+    <section id="everywhere" class="pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal mb-16 max-w-2xl">
+          <div class="text-xs font-semibold uppercase tracking-wider text-purple-400 mb-3">Everywhere</div>
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white">One companion, every surface.</h2>
+          <p class="mt-4 text-base text-zinc-400 leading-relaxed">Web, iOS, Android, WhatsApp, Discord, Slack — same memory, same personality, same Golpo.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/[0.06]">
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <i data-lucide="languages" class="w-6 h-6 text-purple-400"></i>
+            <h3 class="mt-5 text-lg font-semibold text-white">40+ languages</h3>
+            <p class="mt-2 text-sm text-zinc-500 leading-relaxed">Switch languages mid-sentence; Golpo follows along without losing the thread.</p>
+          </div>
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <i data-lucide="clock" class="w-6 h-6 text-purple-400"></i>
+            <h3 class="mt-5 text-lg font-semibold text-white">Offline mode</h3>
+            <p class="mt-2 text-sm text-zinc-500 leading-relaxed">On-device models keep core conversation working when you have no signal.</p>
+          </div>
+          <div class="reveal bg-black hover:bg-white/[0.02] transition-colors p-8">
+            <i data-lucide="sparkles" class="w-6 h-6 text-purple-400"></i>
+            <h3 class="mt-5 text-lg font-semibold text-white">Beautiful, quiet UI</h3>
+            <p class="mt-2 text-sm text-zinc-500 leading-relaxed">No streaks, no badges, no engagement traps. Just a place to talk.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="pb-36">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="reveal border border-white/[0.08] bg-white/[0.02] p-12 md:p-20 text-center">
+          <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white max-w-3xl mx-auto leading-[1.1]">Ready to meet your companion?</h2>
+          <p class="mt-5 text-base md:text-lg text-zinc-400 leading-relaxed max-w-2xl mx-auto">Sign up free. Pick a personality. Start talking.</p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="/sign-up/" class="inline-flex items-center justify-center gap-2 bg-purple-600 px-6 py-3 text-sm font-medium text-white hover:bg-purple-700 transition-colors">Get started <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            <a href="/pricing/" class="inline-flex items-center justify-center gap-2 border border-white/[0.1] px-6 py-3 text-sm text-zinc-300 hover:bg-white/[0.04] transition-colors">See pricing <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+</body>
+</html>
